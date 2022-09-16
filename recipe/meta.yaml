@@ -1,4 +1,4 @@
-{% set version = '1.0.4' %}
+{% set version = "1.0.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/kde1d_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/kde1d/kde1d_{{ version }}.tar.gz
-  sha256: 124eb2e427e08fd24ca37e0baa697736601785d6c6fb1c97c2ebcc5146bb4556
+  sha256: b5fab76a394a7819deee10afdff39ac64fccdb844735adfe51c92043016f2468
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -53,13 +53,10 @@ test:
 about:
   home: https://github.com/tnagler/kde1d
   license: MIT
-  summary: Provides an efficient implementation of univariate local polynomial kernel density
-    estimators that can handle bounded and discrete data. See Geenens (2014) <arXiv:1303.4121>,
-    Geenens and Wang (2018) <arXiv:1602.04862>, Nagler (2018a) <arXiv:1704.07457>, Nagler
-    (2018b) <arXiv:1705.05431>.
+  summary: Provides an efficient implementation of univariate local polynomial kernel density estimators that can handle bounded and discrete data. See Geenens (2014) <arXiv:1303.4121>, Geenens and Wang (2018) <arXiv:1602.04862>, Nagler (2018a) <arXiv:1704.07457>, Nagler (2018b) <arXiv:1705.05431>.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
