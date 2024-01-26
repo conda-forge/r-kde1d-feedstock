@@ -3,6 +3,7 @@ About r-kde1d-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-kde1d-feedstock/blob/main/LICENSE.txt)
 
+
 About r-kde1d
 -------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/tnagler/kde1d
 Package license: MIT
 
 Summary: Provides an efficient implementation of univariate local polynomial kernel density estimators that can handle bounded and discrete data. See Geenens (2014) <arXiv:1303.4121>, Geenens and Wang (2018) <arXiv:1602.04862>, Nagler (2018a) <arXiv:1704.07457>, Nagler (2018b) <arXiv:1705.05431>.
+
 About r-kde1d
 -------------
 
@@ -153,7 +155,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
