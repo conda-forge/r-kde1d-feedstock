@@ -1,6 +1,5 @@
 {% set version = "1.0.7" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-kde1d
@@ -13,8 +12,7 @@ source:
   sha256: d60bc5f543d865df9f928b4dfe0e4f846774280d7faa343a24c0e7083129cffc
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +20,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -39,7 +39,6 @@ requirements:
     - r-randtoolbox
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     #- r-bh
     - r-rcpp
     - r-rcppeigen
