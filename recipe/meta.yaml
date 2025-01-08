@@ -1,4 +1,4 @@
-{% set version = "1.0.7" %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/kde1d_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/kde1d/kde1d_{{ version }}.tar.gz
-  sha256: d60bc5f543d865df9f928b4dfe0e4f846774280d7faa343a24c0e7083129cffc
+  sha256: 59d74e342bb6cb31f2b9b2715880b78efd037e233f6c6731cd6fcac1e666a546
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
